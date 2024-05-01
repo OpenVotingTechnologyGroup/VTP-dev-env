@@ -3,7 +3,7 @@
 	path = VoteTrackerPlus
 	url = git@github.com:TrustTheVote-Project/VoteTrackerPlus.git
 [submodule "VTP-web-api"]
-        branch = main
+        branch = feature/milestone5
 	path = VTP-web-api
 	url = git@github.com:TrustTheVote-Project/VTP-web-api.git
 [submodule "VTP-web-client"]

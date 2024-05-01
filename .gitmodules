@@ -1,15 +1,16 @@
 [submodule "VoteTrackerPlus"]
-        branch = feature/milestone4
+        branch = main
 	path = VoteTrackerPlus
 	url = git@github.com:TrustTheVote-Project/VoteTrackerPlus.git
 [submodule "VTP-web-api"]
-        branch = feature/milestone4
+        branch = main
 	path = VTP-web-api
 	url = git@github.com:TrustTheVote-Project/VTP-web-api.git
 [submodule "VTP-web-client"]
-        branch = feature/milestone4
+        branch = feature/milestone5
 	path = VTP-web-client
-	url = git@github.com:TrustTheVote-Project/VTP-web-client.git
+        url = git@github.com:OpenVotingTechnologyGroup/VTP-web-client.git
+#	url = git@github.com:TrustTheVote-Project/VTP-web-client.git
 [submodule "VTP-mock-election.US.16"]
         branch = main
 	path = VTP-mock-election.US.16

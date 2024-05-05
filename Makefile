@@ -31,6 +31,7 @@ help:
 	@echo "            syntax BRANCH=main) ignoring submodule errors"
 	@echo "            if the branch does not exist"
 	@echo "status    - will print the git status for all the repos"
+	@echo "4e        - will exec 'git submodule foreach git \$$CMD'"
 	@echo "etags     - constructs an emacs tags table"
 	@echo ""
 
@@ -39,9 +40,11 @@ help:
 init:
 	git submodule update --init --merge --remote --recursive
 
-.PHONY: checkout
+.PHONY: checkout 4e
 checkout:
 	git submodule foreach "git checkout ${BRANCH} || :"
+4e:
+	git submodule foreach git ${CMD}
 
 .PHONY: status
 status:

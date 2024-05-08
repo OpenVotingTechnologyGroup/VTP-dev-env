@@ -48,10 +48,13 @@ checkout:
 
 .PHONY: status
 status:
-	@echo "${YELLOW}Running: git submodule foreach git status${END}"
-	@git submodule foreach git status
-	@echo "${YELLOW}Running: git status${END}"
-	@git status
+	@echo "${RED}Inspecting all repos...${END}"
+	@echo "Entering 'VTP-dev-env'"
+	@git remote get-url origin
+	@git submodule foreach git remote get-url origin
+	@echo "Entering 'VTP-dev-env'"
+	@git status -s
+	@git submodule foreach git status -s
 
 # emacs tags
 ETAG_SRCS := $(shell find * -type f -name '*.py' -o -name '*.md' | grep -v defunct)

@@ -11,7 +11,3 @@
 	path = VTP-web-client
         url = git@github.com:OpenVotingTechnologyGroup/VTP-web-client.git
 #	url = git@github.com:TrustTheVote-Project/VTP-web-client.git
-[submodule "VTP-mock-election.US.16"]
-        branch = main
-	path = VTP-mock-election.US.16
-	url = git@github.com:TrustTheVote-Project/VTP-mock-election.US.16.git

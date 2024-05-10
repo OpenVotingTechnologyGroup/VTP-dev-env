@@ -48,13 +48,8 @@ checkout:
 
 .PHONY: status
 status:
-	@echo "${RED}Inspecting all repos...${END}"
-	@echo "Entering 'VTP-dev-env'"
-	@git remote get-url origin
-	@git submodule foreach git remote get-url origin
-	@echo "Entering 'VTP-dev-env'"
-	@git status -s
-	@git submodule foreach git status -s
+	@echo "${RED}VTP-dev-env${END}\n`git remote get-url origin`\n`git branch --show-current`\n`git status -s`"
+	@git submodule --quiet foreach 'echo "${RED}$${name}${END}" && git remote get-url origin && git branch --show-current && git status -s'
 
 # emacs tags
 ETAG_SRCS := $(shell find * -type f -name '*.py' -o -name '*.md' | grep -v defunct)

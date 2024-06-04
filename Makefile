@@ -44,7 +44,7 @@ init:
 checkout:
 	git submodule foreach "git checkout ${BRANCH} || :"
 4e:
-	git submodule foreach git ${CMD}
+	git submodule foreach "git ${CMD} || :"
 
 .PHONY: status
 status:

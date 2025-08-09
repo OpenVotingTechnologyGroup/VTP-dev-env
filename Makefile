@@ -34,6 +34,9 @@ help:
 	@echo "4e        - will exec 'git submodule foreach git \$$CMD'"
 	@echo "etags     - constructs an emacs tags table"
 	@echo ""
+	@echo "To switch ElectionData repos, 'git rm the-old-ElectionData'"
+	@echo "and 'git add the-new-ElectionData'"
+	@echo ""
 
 # checkout the latest on main on all the submodules
 .PHONY: init

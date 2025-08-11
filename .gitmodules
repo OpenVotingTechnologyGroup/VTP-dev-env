@@ -1,13 +1,13 @@
 [submodule "VoteTrackerPlus"]
-        branch = main
+	branch = 5-support-for-multi-seat-sequential-rcv
 	path = VoteTrackerPlus
 	url = git@github.com:OpenVotingTechnologyGroup/VoteTrackerPlus.git
 [submodule "VTP-web-api"]
-        branch = feature/milestone5
+	branch = 5-support-for-multi-seat-sequential-rcv
 	path = VTP-web-api
 	url = git@github.com:OpenVotingTechnologyGroup/VTP-web-api.git
 [submodule "VTP-web-client"]
-        branch = feature/milestone5
+	branch = 5-support-for-multi-seat-sequential-rcv
 	path = VTP-web-client
         url = git@github.com:OpenVotingTechnologyGroup/VTP-web-client.git
 [submodule "VTP-mock-election.sRCV.1"]

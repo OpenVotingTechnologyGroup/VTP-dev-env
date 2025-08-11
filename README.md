@@ -8,16 +8,16 @@ This repo contains four git submodules that comprise a complete VTP election ins
 
 | Git Repository | Contents | Development Notes |
 | --- | --- | --- |
-| [VTP-mock-election.US.16](https://github.com/TrustTheVote-Project/VTP-mock-election.US.16) | Contains the ElectionData - the definition of the election (address, contest, and tally information etc); all blank ballots; all Cast Vote Records (contest CVR's) and ballot receipts | See [VTP-mock-election.US.16](https://github.com/TrustTheVote-Project/VTP-mock-election.US.16) |
-| [VTP-web-api](https://github.com/TrustTheVote-Project/VTP-web-api) | Contains the python FastAPI & uvicorn based web API | main branch has linear history with signed commits |
-| [VTP-web-client](https://github.com/TrustTheVote-Project/VTP-web-client) | Contains the html/css/javascript client front end | main branch has linear history with signed commits |
-| [VoteTrackerPlus](https://github.com/TrustTheVote-Project/VoteTrackerPlus) | Contains the python based backend | main branch has linear history with signed commits |
+| [VTP-mock-election.US.17](https://github.com/OpenVotingTechnologyGroup/VTP-mock-election.US.17) | Contains the ElectionData - the definition of the election (address, contest, and tally information etc); all blank ballots; all Cast Vote Records (contest CVR's) and ballot receipts | See [VTP-mock-election.US.17](https://github.com/OpenVotingTechnologyGroup/VTP-mock-election.US.17) |
+| [VTP-web-api](https://github.com/OpenVotingTechnologyGroup/VTP-web-api) | Contains the python FastAPI & uvicorn based web API | main branch has linear history with signed commits |
+| [VTP-web-client](https://github.com/OpenVotingTechnologyGroup/VTP-web-client) | Contains the html/css/javascript client front end | main branch has linear history with signed commits |
+| [VoteTrackerPlus](https://github.com/OpenVotingTechnologyGroup/VoteTrackerPlus) | Contains the python based backend | main branch has linear history with signed commits |
 
 The point of this repo is basically to track work that spans multiple repos and in particular when a specific set of the VTP repos are in a working state, such as at the end of a milestone or significant cross repo effort.
 
 If one is working primarily in just one repo, then this repo can more or less be ignored.
 
-The three code repos (VTP-web-client, VTP-web-api, VoteTrackerPlus) follow normal GitHub software development practices - GitHub issues, pull requests (PRs), discussion lists, project pages.  All work is done on a branch, PR'ed, and squah merged.  The ElectionData repo (VTP-mock-election.US.16) only employs the main branch for actual changes while executing the election consumes branches.  Branches can be used for development in the ElectionData repo, but the current practice is to just create another ElectionData repo and if/when it is all good, just swap it in.
+The three code repos (VTP-web-client, VTP-web-api, VoteTrackerPlus) follow normal GitHub software development practices - GitHub issues, pull requests (PRs), discussion lists, project pages.  All work is done on a branch, PR'ed, and squah merged.  The ElectionData repo (VTP-mock-election.US.17) only employs the main branch for actual changes while executing the election consumes branches.  Branches can be used for development in the ElectionData repo, but the current practice is to just create another ElectionData repo and if/when it is all good, just swap it in.
 
 Regarding python, poetry is primarly used to manage python environments and as such there is a pyproject.toml file in the VTP-web-api and VoteTracker+ repos.  Each python repo has its own python environment; however, the VTP-web-api poetry environment is a superset of the VoteTrackerPlus poetry environment.
 
@@ -29,7 +29,7 @@ All commits across all the repos need to be signed - see [Signing commits](https
 
 ```bash
 # Clone this repo (a https example - can also use ssh directly):
-$ git clone https://github.com/TrustTheVote-Project/VTP-dev-env.git
+$ git clone https://github.com/OpenVotingTechnologyGroup/VTP-dev-env.git
 
 # Run the makefile there, which will pull this and the other repos of interest
 # as git submodules
@@ -42,7 +42,7 @@ $ make poetry-build
 $ poetry shell
 
 # To setup a mock demo election using this (ElectionData) repo:
-$ cd ../VTP-mock-election.US.16
+$ cd ../VTP-mock-election.US.17
 $ setup-vtp-demo
 
 # To run the uvicorn server and have it listen on the LAN for incomgin 

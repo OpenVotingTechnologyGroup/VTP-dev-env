@@ -13,3 +13,6 @@
 [submodule "VTP-mock-election.sRCV.1"]
 	path = VTP-mock-election.sRCV.1
 	url = git@github.com:OpenVotingTechnologyGroup/VTP-mock-election.sRCV.1.git
+[submodule "VTP-mock-election.US.17"]
+	path = VTP-mock-election.US.17
+	url = git@github.com:OpenVotingTechnologyGroup/VTP-mock-election.US.17.git

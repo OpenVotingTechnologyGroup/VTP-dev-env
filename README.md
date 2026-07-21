@@ -32,9 +32,12 @@ All commits across all the repos need to be signed - see [Signing commits](https
 $ git clone https://github.com/OpenVotingTechnologyGroup/VTP-dev-env.git
 
 # Run the makefile there, which will pull this and the other repos of interest
-# as git submodules
+# as git submodules.  The 'make init' commands wraps the git submodule
+# command which leaves the submodules as detached HEADs.  The 'make
+# checkout' switches the HEAD to the main branch.
 $ cd VTP-dev-env
-$ make main
+$ make init
+$ BRANCH=main make checkout
 
 # Using poetry perform a local install of VoteTracker+
 $ cd VoteTrackerPlus
@@ -42,7 +45,7 @@ $ make poetry-build
 $ poetry env activate
 
 # To setup a mock demo election using this (ElectionData) repo:
-$ cd ../VTP-mock-election.US.17
+$ cd ../VTP-mock-election.sRCV.1
 $ setup-vtp-demo
 
 # To run the uvicorn server and have it listen on the LAN for incomgin 
@@ -61,7 +64,7 @@ $ make run HOST=0.0.0.0
 
 Note - the above does not include running a VTP backend tabulation server - see the VoteTrackerPlus for more information regarding that level of demo/test operation.  A backend tabulation server is the server process responsible for merging cast CVR's to the git main branch, allowing for the eventual aggregation in the ElectionData repository of all the tabulation servers involved in the election.  Contest CVR's are initially commited on independent git branches by either the web-api or CLI.
 
-## Finally, a few GitHub status/reference links:
+## FYI - a few GitHub status/reference links:
 
 [GitHub status](https://www.githubstatus.com/)
 
